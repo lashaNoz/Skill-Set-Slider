@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary: #e45252;
+  --secondary: #3d3a39;
+  --white: #fff;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--secondary);
+  display: grid;
+  place-items: center;
+}
+
+.heading {
+  font-size: 8rem;
+  color: var(--primary);
+  font-weight: 600;
+  text-shadow: 0 0 0.3rem var(--white);
+}
+
+.slideshow {
+  height: 35rem;
+  width: 120rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  height: 300%;
+  background-color: #c2bbbb;
+  position: relative;
+  top: 0%;
+  transition: top 0.4s;
+}
+
+.slide {
+  height: 35rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  height: 30rem;
+  aspect-ratio: 1;
+  background-color: var(--secondary);
+  border-radius: 0.3rem;
+  display: grid;
+  place-items: center;
+  text-shadow: 0 0 0.3rem #555;
+}
+
+.box i {
+  font-size: 15rem;
+  color: var(--primary);
+  text-shadow: 0 0 0.2rem var(--white);
+}
+
+.controls {
+  width: 0.2rem;
+  height: 15rem;
+  background-color: var(--secondary);
+  position: absolute;
+  top: calc(50% - 7.5rem);
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border: 0.2rem solid var(--secondary);
+  border-radius: 5rem;
+  background-color: #c2bbbb;
+  cursor: pointer;
+}
+
+.active.control {
+  background-color: var(--primary);
+  transition: background-color 0.5s;
+}
